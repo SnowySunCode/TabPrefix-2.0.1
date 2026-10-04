@@ -1,0 +1,21 @@
+# Build output and downloaded dependencies
+/.build/
+/dist/
+/libs/*.jar
+
+# Compiled files
+*.class
+*.log
+hs_err_pid*
+
+# Local editor and operating-system files
+.DS_Store
+._*
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Keep shared VS Code project settings
+/.vscode/*
+!/.vscode/settings.json

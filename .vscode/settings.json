@@ -1,0 +1,10 @@
+{
+  "java.project.sourcePaths": [
+    "src"
+  ],
+  "java.project.outputPath": ".build/ide-classes",
+  "java.project.referencedLibraries": [
+    ".build/deps/provided/*.jar",
+    ".build/deps/runtime/*.jar"
+  ]
+}

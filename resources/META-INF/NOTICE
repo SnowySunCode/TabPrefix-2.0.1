@@ -1,0 +1,17 @@
+TabPrefix — third-party runtime notices
+
+This distribution embeds the pinned runtime artifacts listed in dependencies.conf.
+Their original licenses remain applicable. Relocation/package names and service
+metadata are adjusted during the plugin build; licenses are retained verbatim.
+
+Adventure 4.17.0 / Adventure Platform 4.3.4: MIT, KyoriPowered.
+Examination 1.3.0 / Option 1.0.0: MIT, KyoriPowered.
+SLF4J API and JDK14 binding 1.7.36: MIT, QOS.ch Sarl.
+Gson 2.10.1: Apache License 2.0, Google.
+JetBrains Annotations 24.1.0: Apache License 2.0, JetBrains.
+SQLite JDBC 3.50.3.0: bundled LICENSE and LICENSE.zentus notices retained.
+
+Full license texts and their source URLs are in META-INF/licenses. SQLite's
+bundled notices are also preserved in META-INF/maven/org.xerial/sqlite-jdbc.
+Spigot/LuckPerms APIs and the JarJar/ASM build tools are not embedded in this JAR.
+No license for the original TabPrefix application code is assigned by this file.

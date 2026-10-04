@@ -1,0 +1,429 @@
+TABPREFIX LICENSE 1.0
+Commercial Use, Attribution and No Modification
+Published: 4 October 2026
+
+Copyright (c) 2026 SnowySunCode.
+All rights not expressly granted below are reserved.
+
+This is a custom software license. It is not an open-source license.
+
+1. PARTIES, SCOPE AND DEFINITIONS
+
+"Licensor" means the rights holder publishing TabPrefix under the name
+SnowySunCode. "You" means the individual or organization exercising rights
+under this License.
+
+"Software" means the original TabPrefix materials to which Licensor applies
+this License: Java source and compiled code, the plugin, its built-in web
+editor and original HTML, CSS and JavaScript, original bundled assets,
+configuration and message templates, build and test scripts, tests and
+documentation. It excludes Third-Party Components and User Materials.
+
+"Third-Party Components" means material supplied under its own license by
+another rights holder, whether embedded, relocated, shaded, linked, downloaded
+or distributed alongside the Software.
+
+"User Materials" means user-provided settings, text, group definitions,
+images, GIFs, fonts and other content, and operating data and generated
+outputs described in Section 10.
+
+"Unmodified" means that the original Software's code, embedded editor,
+identity and notices have not been altered, except for the expressly
+permitted configuration and build operations in Sections 4 and 8.
+
+"Larger Project" means a genuine server, application, hosting environment,
+server distribution or service in which the Software is a component. Merely
+renaming the Software, changing its archive format or adding superficial
+packaging does not make it a Larger Project.
+
+This License applies only to rights Licensor owns or is entitled to grant.
+Section 9 governs Third-Party Components; Section 17 preserves rights that
+applicable law does not allow this License to restrict.
+
+2. PERMISSION TO USE
+
+Subject to this License, Licensor grants You a worldwide, non-exclusive,
+royalty-free permission for the duration of the applicable rights to:
+
+(a) obtain, install, load, run, display and use Unmodified copies of the
+    Software on any number of systems;
+(b) make copies needed for installation, deployment, staging, testing,
+    backup, recovery and migration;
+(c) operate the Software in personal, educational, nonprofit, governmental,
+    business and commercial environments;
+(d) use its supplied commands, editor, resource pack workflow and exposed
+    interfaces, and configure it as permitted by Section 4;
+(e) reproduce and redistribute Unmodified copies under Section 5; and
+(f) inspect and compile available original source under Section 8.
+
+To the extent Licensor has authority to grant it, these permissions also
+include use under patent claims controlled by Licensor that are necessarily
+infringed by running the Unmodified Software as supplied. This limited grant
+does not cover additional features of a Larger Project, prohibited changes
+or patent rights held by another party.
+
+Employees, contractors and hosting providers may perform these permitted
+operations on Your behalf. Any independent recipient obtains permission
+directly from Licensor under this License, rather than under a sublicense
+issued by You.
+
+3. COMMERCIAL PROJECTS AND SERVICES
+
+Commercial use is expressly permitted without a fee to Licensor. You may
+use the Software in monetized Minecraft servers, paid hosting, managed
+services and paid Larger Projects. You may charge for Your own project,
+hosting, configuration, installation, maintenance, support or training.
+
+You may include an Unmodified copy as a component of a paid Larger Project
+under Section 5. This does not authorize selling the Software as a standalone
+product, charging a separate fee for a copy of it or selling access to a
+download of it. Written permission from Licensor is required for those uses.
+
+Describe charges accurately. Do not present Your fees as a mandatory
+TabPrefix license fee or claim that Your service is supplied or endorsed by
+Licensor. A paid Larger Project must provide something beyond a repackaged
+copy of the Software.
+
+This License does not authorize conduct prohibited by Minecraft's terms,
+another provider's terms or applicable law. You remain responsible for
+compliance with terms that apply to Your project and monetization.
+
+4. CONFIGURATION, CONTENT AND EXTERNAL INTEGRATION
+
+You may create, edit, translate, copy and distribute configuration and message
+files intended to be customized, including config.yml, messages.yml and
+messages_ru.yml. You may change their values and message text without
+altering Java code or embedded web editor code. Keep any copyright or license
+notice supplied in those files. Attribution obligations under Section 6
+remain applicable even if configurable runtime messages hide a product name.
+
+You may create and change group prefixes, colors, formatting, permissions,
+editor options, uploaded media, drafts and resource pack settings using
+the Software's supported features. You may generate, edit, combine, host
+and distribute resulting resource packs and other outputs under Section 10.
+
+You may configure reverse proxies, TLS, DNS, storage locations, firewalls,
+JVM options and deployment automation around the Software. You may develop
+separate integrations that communicate through its exposed commands, HTTP
+routes, available public APIs, events or generated outputs. Those integrations
+remain Your own work and need not adopt this License merely because they
+communicate with the Software.
+
+These permissions do not authorize changing the Software's implementation,
+injecting replacement implementation code, patching classes or rebuilding
+the embedded web editor with altered HTML, CSS or JavaScript. Normal execution
+of the original code, including its generation of dynamic responses, is
+permitted. Configuration changes, integrations and outputs permitted here
+are not prohibited modifications for purposes of Section 7.
+
+5. REDISTRIBUTION AND BUNDLING
+
+You may share, mirror, cache and redistribute Unmodified copies, including
+available original source and documentation. Standalone redistribution must
+be free of a charge for obtaining the Software. Inclusion in a paid Larger
+Project is permitted under Section 3.
+
+For every redistribution You must:
+
+(a) supply the complete text of this License and preserve applicable
+    copyright, license, attribution and third-party notices;
+(b) identify the component as TabPrefix by SnowySunCode and identify the
+    distributed version accurately;
+(c) keep the Software identifiable and separable from Your own licensing
+    terms, whether as a separate JAR, source tree or clearly identified
+    component;
+(d) allow recipients to exercise this License's permissions for the Software,
+    including use and further permitted redistribution, without adding
+    conflicting restrictions or technical access controls; and
+(e) comply with the independent licenses of all included components.
+
+Archive compression, transport encryption and packaging an Unmodified JAR
+alongside Your project are permitted. You may supply Your permitted external
+configuration files with it. These permissions do not authorize altering
+the JAR's original code, embedded editor, identity or notices.
+
+You may apply different terms to Your independent project, services and
+User Materials, provided those terms clearly exclude the Software from any
+conflicting restrictions. Do not relicense the Software or imply that Your
+project's license replaces this License.
+
+Hosting sites and distribution platforms may host, store, cache, scan and
+deliver copies within these permissions. Their separate requirements still
+apply. This License alone does not authorize You to grant them additional
+rights to modify or relicense the Software.
+
+6. AUTHORSHIP, NOTICES AND CREDIT
+
+Preserve supplied copyright notices, this License, third-party notices and
+the original author and project identity in the Software's metadata. Do not
+remove, falsify or replace attribution, or claim to have authored TabPrefix.
+
+When You redistribute the Software, include this credit in accompanying
+documentation or a credits or dependencies notice:
+
+    TabPrefix by SnowySunCode. Licensed under TabPrefix License 1.0.
+
+When You operate the Software as part of a commercial project or publicly
+offered service, also provide that credit in at least one reasonably
+accessible place: a credits page, documentation, server help or a dependencies
+notice. For a genuinely internal project, documentation accessible to its
+operators is sufficient.
+
+Use the exact credit above, optionally with a translation. A link to the
+official project page is encouraged but is not required. This License does
+not require repeated chat announcements, a permanent on-screen watermark
+or attribution in each individual prefix or generated resource pack.
+
+7. PROHIBITED MODIFICATIONS AND USES
+
+Except for Sections 4, 8, 9 and 17 or Licensor's separate written permission,
+You may not:
+
+(a) alter, adapt, translate, patch, replace or extend the Software's source
+    code, compiled classes or original embedded web editor code;
+(b) create, run or distribute a version resulting from those changes,
+    including a private fork or a version used only inside Your organization;
+(c) extract original Software code or original editor assets for reuse in
+    another program, or create derivative implementation code from them;
+(d) change the Software's implementation through bytecode transformations,
+    hot swapping or runtime patching, or remove licensing or attribution
+    conditions by technical workarounds;
+(e) rebrand the Software, falsify its version or origin, or describe a
+    third-party distribution as an official release;
+(f) sell standalone copies or standalone download access contrary to Section 3;
+(g) grant a sublicense purporting to override this License; or
+(h) claim Licensor's endorsement, or claim ownership of the original Software
+    or material belonging to others.
+
+Selecting an available option, changing group permissions or configuring
+which features are enabled does not itself violate these restrictions.
+Legitimate observation, profiling and security testing of systems You are
+authorized to test are permitted when they do not involve otherwise
+prohibited code changes or infringe rights held by others.
+
+8. SOURCE ACCESS, COMPILATION AND SECURITY REPORTS
+
+If Licensor provides source, You may read it, inspect it, study its operation,
+make permitted copies and compile it using the supplied, Unmodified build
+workflow. Providing source does not grant permission to modify it.
+
+Compilation, packaging, relocation, shading and other transformations
+performed by that original workflow are permitted. You may select compatible
+toolchains and provide ordinary environment settings. Do not use this
+permission to change original implementation code, editor assets, identity
+or the workflow itself. Rights to Third-Party Components remain governed
+by Section 9.
+
+You may use or distribute a build from Unmodified official source under this
+License. If You distribute such a build rather than Licensor's release binary,
+state in accompanying documentation that it was built by You from Unmodified
+official source and identify the source version. Do not claim Licensor built
+or tested Your binary.
+
+You may publish original bug reports, security findings, benchmarks, reviews,
+screenshots and demonstrations, provided You respect rights held by others
+and protect confidential information and user credentials. This permission
+does not authorize distributing modified Software or copied implementation
+code. Permission for a code patch or changed implementation must be obtained
+separately unless Section 17 applies.
+
+9. THIRD-PARTY COMPONENTS
+
+Third-Party Components keep their own licenses. This License does not replace,
+restrict or cancel any permission those licenses grant, including rights to
+inspect, modify and redistribute the components themselves. Their applicable
+terms prevail for those components, regardless of shading, relocation or
+packaging inside the same JAR.
+
+For the TabPrefix distribution, consult META-INF/NOTICE, META-INF/licenses,
+dependency notices and dependency metadata. Components may include Adventure,
+Adventure Platform, Examination, Option, Gson, SLF4J, JetBrains Annotations
+and SQLite JDBC. The applicable notices and licenses of the particular
+release, rather than this illustrative list, identify their terms.
+
+Minecraft, Bukkit/Spigot, Paper, Purpur, LuckPerms and other external software
+also remain subject to their respective terms. No ownership or unrestricted
+rights over those projects are claimed here.
+
+Exercising third-party rights does not, by itself, give You permission to
+alter Licensor's original TabPrefix code or editor assets. Conversely, no
+restriction here may be used to deny rights independently granted by a
+Third-Party Component's license.
+
+10. USER MATERIALS, GENERATED OUTPUTS AND OPERATING DATA
+
+This License gives Licensor no ownership of Your independently created
+settings, text, prefixes, uploaded images, GIFs, fonts or other content.
+You remain responsible for having the rights and permissions required to
+use content supplied by You or Your users.
+
+Outputs and operating data include processed images and frames, generated
+atlases and font definitions, resource pack ZIPs, glyph assignments, saved
+editor options, drafts, save codes, session data, database records, group
+settings and audit logs. Licensor permits their use, modification, merging,
+export, migration, backup, distribution and commercial exploitation to the
+extent Licensor has rights in those generated outputs.
+
+This License's prohibition on modifying the Software does not apply to those
+outputs or data. Copyright and other rights in underlying user or third-party
+material still apply. Embedded copies of separately licensed material retain
+their terms; original implementation code does not become unrestricted merely
+because someone copies it into an output file.
+
+You do not have to license Your own content or a generated resource pack
+under this License. Legal permission to edit outputs does not guarantee that
+every edited database or resource pack will remain technically compatible.
+
+11. OPERATION, SECURITY AND PRIVACY
+
+You are responsible for administering Your environment, controlling access,
+handling uploads and credentials, maintaining backups and complying with
+privacy and data protection obligations applicable to Your service.
+
+This License alone does not authorize Licensor to access Your server, receive
+Your uploads or collect Your users' personal information. It is not a privacy
+policy, data processing agreement or consent to telemetry. Any separate
+service involving data access requires its own applicable terms and lawful
+basis.
+
+Third-party platforms, hosts, proxies and connected services operate under
+their own terms. Permission to run the Software does not waive their
+requirements or authorize testing or accessing systems without permission.
+
+12. PROJECT NAME, BRANDING AND PUBLIC PRESENTATION
+
+You may use the names TabPrefix and SnowySunCode to identify the Software,
+give required credit and describe compatibility or legitimate use. You may
+show the Unmodified interface in screenshots, tutorials and demonstrations.
+
+No right to register those names or original logos as Your own marks, impersonate
+Licensor or suggest sponsorship is granted. Your Larger Project may have
+its own name and branding, while preserving the Software's identity and
+required attribution. Descriptive use does not imply trademark ownership
+or endorsement.
+
+13. DOCUMENTATION AND TRANSLATIONS
+
+You may redistribute original documentation, quote reasonable portions for
+support and instruction, and create Your own deployment guides and tutorials.
+You may translate documentation and configurable messages, retaining supplied
+notices and identifying unofficial translations as such.
+
+Do not present altered implementation code or altered embedded editor assets
+as a documentation change. Translations of this License may be provided for
+convenience, alongside the complete English text. The English text controls
+interpretation to the extent applicable law permits; a translation cannot
+add or remove permissions.
+
+14. CONTRIBUTIONS AND SEPARATE PERMISSIONS
+
+Licensor may give written permission for a specific modification, derivative
+version, redistribution arrangement or other use outside this License. Such
+permission must identify its scope. Silence, public source access or acceptance
+of a bug report does not provide additional permission.
+
+Contributors retain rights in their independently authored contributions
+unless a separate agreement says otherwise. Submission of a suggestion or
+report does not automatically assign copyright. Any agreement needed to
+incorporate separately contributed code must be made with its rights holder.
+
+Requests may be made through Licensor's official project page or repository.
+You are not entitled to approval, support, payment or inclusion of a submission.
+
+15. UPDATES, SUPPORT AND LICENSE VERSIONS
+
+This License creates no promise of maintenance, updates, backward compatibility,
+support, availability or a service level. Licensor may offer those separately.
+
+Licensor may publish future releases under different terms or stop distributing
+a release. This does not automatically change this License for a copy already
+lawfully obtained under it, revoke a compliant grant or cancel rights already
+granted under another license. A later release's terms apply only when validly
+attached to that release and accepted as required by applicable law.
+
+This text is intended for TabPrefix materials expressly supplied with it.
+It does not retroactively replace licenses previously granted by Licensor
+or another rights holder.
+
+16. BREACH AND TERMINATION
+
+A material breach ends the permissions granted by this License, subject to
+any mandatory notice or cure requirement under applicable law. Upon termination,
+stop uses requiring those permissions and remove copies from active deployment
+except where applicable law or another valid grant permits retention or use.
+
+For a first unintentional breach, permissions are reinstated if You fully cure
+it within 30 days after first becoming aware of it. Other reinstatement requires
+Licensor's written permission. Reinstatement does not erase claims arising
+from an earlier infringement or breach.
+
+Termination does not take away a separate compliant recipient's permissions,
+rights in User Materials, rights under Third-Party Component licenses or
+non-waivable legal rights. Provisions concerning ownership, notices for retained
+copies, Third-Party Components, liability and mandatory law continue to apply
+as relevant after termination.
+
+17. MANDATORY LAW AND INDEPENDENT RIGHTS
+
+Every grant and restriction in this License is subject to applicable law.
+It does not limit an act that requires no permission from Licensor, a
+non-waivable right or a statutory exception that applicable law makes
+available despite a contractual restriction.
+
+Where legally protected, this includes necessary backups, observation,
+study and testing, interoperability-related reverse engineering or
+decompilation, error correction, fair use or fair dealing, and rights arising
+from exhaustion. Their legal conditions continue to apply. No blanket
+prohibition on those legally protected acts is intended.
+
+Licensor claims rights only in protectable material within Licensor's rights.
+This License does not claim copyright ownership of abstract ideas, principles,
+facts or independently created implementations, or prohibit independent work
+merely because it has similar functionality.
+
+18. NO WARRANTY OR SUPPORT COMMITMENT
+
+Except for an express separate agreement or obligations imposed by law, the
+Software is supplied in its present condition. Licensor gives no assurance
+that it will be suitable for a particular project, meet Your requirements,
+remain available, be free of defects or vulnerabilities, or interoperate
+with every server, plugin, client, network or resource pack.
+
+No promise about uninterrupted operation, preservation of data, profitability
+or legal compliance of Your project is made. You are responsible for deciding
+whether the Software is appropriate for Your environment and for operational
+testing, backups and safeguards. Mandatory warranties remain unaffected.
+
+19. LIMITS ON LIABILITY
+
+To the extent applicable law allows exclusion, Licensor and original
+contributors are not responsible for losses caused by use, distribution or
+inability to use the Software, including lost data, lost revenue, downtime,
+interoperability failures and consequential losses.
+
+Nothing here excludes or limits liability that cannot legally be excluded
+or limited, including applicable liability for intentional misconduct,
+fraud, gross negligence, death or personal injury. A separate valid agreement
+may provide additional obligations for its parties.
+
+20. GENERAL TERMS
+
+Exercise of permissions requiring Licensor's authorization is conditional
+on complying with this License, subject to Section 17. No ownership is
+transferred by receiving a copy. No permission for a trademark or for patent
+claims outside the express grant in Section 2 is implied; an independent
+legal right or separately granted permission remains unaffected.
+
+If a provision cannot legally be enforced, apply it only to the extent
+permitted and leave the remaining provisions effective where possible.
+Failure to enforce a term on one occasion is not a general waiver. Any
+additional permission or waiver from Licensor must be in writing and within
+Licensor's authority.
+
+This License contains the permission terms for the Software covered by it;
+separate agreements, Third-Party Component licenses and mandatory law govern
+their respective subjects. It does not choose a specific national law or
+court. Applicable law and jurisdiction are determined by the relevant legal
+rules, including mandatory consumer and conflict-of-law rules.
+
+END OF TABPREFIX LICENSE 1.0

@@ -1,0 +1,176 @@
+name: TabPrefix
+version: 2.0.1
+main: me.snowsun.tabprefix.TabPrefix
+api-version: 1.16
+
+prefix: TabPrefix
+description: >
+  Group image, GIF and text prefixes for TAB, chat and name tags.
+  Web editor, resource packs, SQLite and LuckPerms. Java 8 / Minecraft 1.16 - 1.16.5.
+
+author: SnowySunCode
+
+load: POSTWORLD
+
+depend:
+  - LuckPerms
+
+commands:
+
+  lptab:
+    description: Main command for TabPrefix
+    usage: /lptab
+    aliases:
+      - tabprefix
+
+
+permissions:
+
+  # --------------------------------------------------
+  # BASIC
+  # --------------------------------------------------
+
+  tabprefix.use:
+    description: Allows access to the basic TabPrefix command
+    default: true
+
+
+  # --------------------------------------------------
+  # WEB PREFIX EDITOR
+  # --------------------------------------------------
+
+  tabprefix.webeditor:
+    description: Allows opening the TabPrefix web editor
+    default: false
+
+  tabprefix.webpref:
+    description: Allows applying a prefix using a web save code
+    default: false
+
+  tabprefix.webpref.remove:
+    description: Allows removing the custom web prefix from the player's group
+    default: false
+
+  tabprefix.webpref.info:
+    description: Allows viewing information about the current web prefix
+    default: false
+
+
+  # --------------------------------------------------
+  # STATUS
+  # --------------------------------------------------
+
+  tabprefix.status:
+    description: Allows viewing TabPrefix status
+    default: op
+
+
+  # --------------------------------------------------
+  # RELOAD
+  # --------------------------------------------------
+
+  tabprefix.reload:
+    description: Allows reloading TabPrefix configuration
+    default: op
+
+  tabprefix.prefix.manage:
+    description: Allows setting, removing and inspecting group text overrides
+    default: op
+
+
+  # --------------------------------------------------
+  # RESOURCE PACK
+  # --------------------------------------------------
+
+  tabprefix.pack.status:
+    description: Allows viewing the current TabPrefix resource pack status
+    default: op
+
+  tabprefix.pack.send:
+    description: Send the active resource pack
+    default: op
+
+  tabprefix.pack.rollback:
+    description: Activate a retained resource pack
+    default: op
+
+  tabprefix.pack.rebuild:
+    description: Allows rebuilding the TabPrefix resource pack
+    default: op
+
+
+  # --------------------------------------------------
+  # ADMIN BACKLOG
+  # --------------------------------------------------
+
+  tabprefix.adminlog:
+    description: Allows receiving the TabPrefix admin mini-backlog
+    default: op
+
+  tabprefix.adminlog.toggle:
+    description: Allows enabling or disabling the admin mini-backlog
+    default: op
+
+
+  # --------------------------------------------------
+  # USER PERMISSION GROUP
+  # --------------------------------------------------
+
+  tabprefix.user.*:
+    description: Grants all normal TabPrefix user permissions
+    default: false
+    children:
+      tabprefix.use: true
+      tabprefix.webeditor: true
+      tabprefix.webpref: true
+      tabprefix.webpref.remove: true
+      tabprefix.webpref.info: true
+
+
+  # --------------------------------------------------
+  # RESOURCE PACK ADMIN GROUP
+  # --------------------------------------------------
+
+  tabprefix.pack.*:
+    description: Grants all TabPrefix resource pack permissions
+    default: op
+    children:
+      tabprefix.pack.status: true
+      tabprefix.pack.rebuild: true
+      tabprefix.pack.send: true
+      tabprefix.pack.rollback: true
+
+
+  # --------------------------------------------------
+  # ADMIN LOG GROUP
+  # --------------------------------------------------
+
+  tabprefix.adminlog.*:
+    description: Grants all TabPrefix admin backlog permissions
+    default: op
+    children:
+      tabprefix.adminlog: true
+      tabprefix.adminlog.toggle: true
+
+
+  # --------------------------------------------------
+  # FULL ADMIN
+  # --------------------------------------------------
+
+  tabprefix.admin.*:
+    description: Grants all TabPrefix administrative permissions
+    default: op
+    children:
+      tabprefix.use: true
+
+      tabprefix.webeditor: true
+      tabprefix.webpref: true
+      tabprefix.webpref.remove: true
+      tabprefix.webpref.info: true
+
+      tabprefix.status: true
+      tabprefix.reload: true
+      tabprefix.prefix.manage: true
+
+      tabprefix.pack.*: true
+      tabprefix.adminlog.*: true

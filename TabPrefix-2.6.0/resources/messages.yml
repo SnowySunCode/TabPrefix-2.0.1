@@ -1,0 +1,392 @@
+# =========================================================
+# TabPrefix 2.0
+# Messages
+# MiniMessage format
+# =========================================================
+
+
+# =========================================================
+# GENERAL
+# =========================================================
+
+general:
+  prefix: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray>"
+
+  no-permission: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>You do not have permission to use this command.</red>"
+
+  players-only: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>This command can only be used by a player.</red>"
+
+  player-not-found: "<red>Player <player> is not online.</red>"
+
+  unknown-command: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Unknown command.</red>"
+
+  invalid-arguments: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Invalid command arguments.</red>"
+
+  internal-error: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>An internal error occurred.</red>"
+
+  not-ready: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>TabPrefix is not ready yet.</red>"
+
+  reload-failed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Reload refused: <reason></red>"
+
+  reloaded: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Configuration reloaded successfully.</green>"
+
+
+# =========================================================
+# COMMAND HELP
+# =========================================================
+
+help:
+  design: "<yellow>/lptab design</yellow> <gray>- Open the visual server display studio.</gray>"
+  settings: "<yellow>/lptab settings</yellow> <gray>- Choose your personal display preferences.</gray>"
+  linkwifi: "<yellow>/lptab linkwifi [IP|auto]</yellow> <gray>- Choose a local server address for the editor.</gray>"
+  core-help: "<yellow>/lptab help</yellow> <dark_gray>-</dark_gray> <gray>Show available commands.</gray>"
+
+  prefix-set: "<yellow>/lptab prefix set \\<group> [--mini|--legacy] \\<text></yellow> <gray>- Save a group text prefix.</gray>"
+
+  prefix-remove: "<yellow>/lptab prefix remove \\<group></yellow> <gray>- Restore the LuckPerms prefix.</gray>"
+
+  prefix-info: "<yellow>/lptab prefix info \\<group></yellow> <gray>- Show the saved group prefix.</gray>"
+
+  header: "<yellow><bold>TabPrefix 2.0</bold></yellow> <gray>Commands:</gray>"
+
+  webeditor: "<yellow>/lptab webeditor [group]</yellow> <dark_gray>-</dark_gray> <gray>Open the local web prefix editor.</gray>"
+
+  webpref: "<yellow>/lptab webpref <code></yellow> <dark_gray>-</dark_gray> <gray>Apply a saved web prefix.</gray>"
+
+  webpref-remove: "<yellow>/lptab webpref remove</yellow> <dark_gray>-</dark_gray> <gray>Remove the custom prefix from your group.</gray>"
+
+  webpref-info: "<yellow>/lptab webpref info</yellow> <dark_gray>-</dark_gray> <gray>Show information about your current prefix.</gray>"
+
+  status: "<yellow>/lptab status</yellow> <dark_gray>-</dark_gray> <gray>Show TabPrefix status.</gray>"
+
+  doctor: "<yellow>/lptab doctor</yellow> <gray>- Check command delivery; report to chat and server log.</gray>"
+
+  reload: "<yellow>/lptab reload</yellow> <dark_gray>-</dark_gray> <gray>Reload TabPrefix configuration.</gray>"
+
+  pack-status: "<yellow>/lptab pack status</yellow> <dark_gray>-</dark_gray> <gray>Show resource pack status.</gray>"
+
+  glyphs: "<yellow>/lptab glyphs</yellow> <gray>- Glyph capacity.</gray>"
+  pack-send: "<yellow>/lptab pack send [player|all]</yellow> <gray>- Send pack.</gray>"
+  pack-rollback: "<yellow>/lptab pack rollback \\<hash></yellow> <gray>- Activate a retained pack.</gray>"
+  adminlog-recent: "<yellow>/lptab adminlog recent [1..50]</yellow> <gray>- Recent audit history.</gray>"
+  pack-rebuild: "<yellow>/lptab pack rebuild</yellow> <dark_gray>-</dark_gray> <gray>Rebuild the TabPrefix resource pack.</gray>"
+
+  adminlog-on: "<yellow>/lptab adminlog on</yellow> <dark_gray>-</dark_gray> <gray>Enable the admin mini-backlog.</gray>"
+
+  adminlog-off: "<yellow>/lptab adminlog off</yellow> <dark_gray>-</dark_gray> <gray>Disable the admin mini-backlog.</gray>"
+
+
+# =========================================================
+# WEB EDITOR
+# =========================================================
+
+linkwifi:
+  header: "<gold><bold>TabPrefix · Local network</bold></gold>"
+  lan: "<gray>These are server interfaces, not Wi-Fi names. Use the same LAN; no Wi-Fi password is needed.</gray>"
+  current: "<gray>Current address (health check):</gray> <aqua><url></aqua>"
+  row: "<aqua><mark></aqua> <white><network></white> <yellow><address>:<port></yellow> <dark_gray>[<scope>]</dark_gray> <gray>— <command></gray>"
+  auto: "<green>[Automatic address]</green> <gray>— <command></gray>"
+  automatic: "<green>Automatic address selection restored.</green>"
+  selected: "<green>Selected <address> for your links for up to 2 hours. Opening your editor…</green>"
+  address-gone: "<red>This address is no longer available on the server. Run /lptab linkwifi again.</red>"
+  scope-local: "this computer only"
+  scope-virtual: "virtual interface"
+  scope-network: "server interface"
+  footer: "<gray>Click a row to open a new editor session. ● marks the current address. Allow the shown HTTP port through the host firewall if needed.</gray>"
+  loopback-only: "<yellow>Only loopback is available. To connect from another device, check web.bind-address and the server network connection.</yellow>"
+  peer-mismatch: "<yellow>Your game connection address does not match a server subnet. A LAN link works only if your browser can reach that network; selecting an IP does not create a tunnel.</yellow>"
+  state-starting: "<yellow>The web editor is starting. Check /lptab doctor if it stays in this state.</yellow>"
+  state-disabled: "<yellow>The web editor is disabled (web.enabled: false). Enable it and restart the server.</yellow>"
+  state-listening: "<green>Editor listening:</green> <gray><bind>:<port></gray>"
+  state-bind-failed: "<red>Cannot bind the editor at <bind>:<port>: <reason></red> <gray>Check web.bind-address, port availability and /lptab doctor.</gray>"
+  state-start-failed: "<red>Editor startup failed: <reason></red> <gray>Check /lptab doctor and the startup log.</gray>"
+  state-stopped: "<yellow>The web editor has been stopped.</yellow>"
+
+webeditor:
+  starting: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>Creating web editor session...</gray>"
+
+  opened: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Web editor session created.</green>"
+
+  link: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>Editor:</gray> <aqua><url></aqua>"
+
+  expires: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>This editor session expires in <yellow><minutes></yellow> minutes.</gray>"
+
+  session-failed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Could not create a web editor session.</red>"
+
+  session-expired: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>This web editor session has expired.</red>"
+
+  session-limit: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Too many web editor sessions are currently active.</red>"
+
+  unavailable: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>The web editor is currently unavailable.</red>"
+
+
+# =========================================================
+# IMAGE UPLOAD
+# =========================================================
+
+upload:
+  received: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Image uploaded successfully.</green>"
+
+  invalid-format: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Unsupported image format.</red>"
+
+  too-large: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>The uploaded image is too large.</red>"
+
+  invalid-image: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>The uploaded file is not a valid image.</red>"
+
+  processing-failed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Image processing failed.</red>"
+
+  gif-too-many-frames: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>This animation contains too many frames.</red>"
+
+  gif-processed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Animation processed.</green> <gray>Frames: <yellow><frames></yellow></gray>"
+
+
+# =========================================================
+# SAVE CODE
+# =========================================================
+
+save-code:
+  disabled: "<red>Save codes are disabled.</red>"
+  wrong-group: "<red>This code belongs to a different group.</red>"
+  glyph-limit: "<red>The configured Unicode glyph range is full.</red>"
+  created: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Prefix saved.</green>"
+
+  code: "<yellow><bold>Save code:</bold></yellow> <white><code></white>"
+
+  command: "<gray>Apply it in Minecraft:</gray> <yellow>/lptab webpref <code></yellow>"
+
+  expires: "<gray>The code expires in <yellow><minutes></yellow> minutes.</gray>"
+
+  invalid: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Invalid save code.</red>"
+
+  expired: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>This save code has expired.</red>"
+
+  already-used: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>This save code has already been used.</red>"
+
+  wrong-player: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>This save code belongs to another player.</red>"
+
+  failed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Could not create a save code.</red>"
+
+
+# =========================================================
+# PREFIX APPLICATION
+# =========================================================
+
+prefix:
+  applying: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>Applying prefix...</gray>"
+
+  applied: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Prefix applied successfully.</green>"
+
+  applied-group: "<gray>Group:</gray> <yellow><group></yellow>"
+
+  applied-type: "<gray>Type:</gray> <yellow><type></yellow>"
+
+  applied-frames: "<gray>Frames:</gray> <yellow><frames></yellow>"
+
+  removed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Custom prefix removed successfully.</green>"
+
+  none: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>Your group does not currently have a custom prefix.</gray>"
+
+  failed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Could not apply the prefix.</red>"
+
+  remove-failed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Could not remove the prefix.</red>"
+
+  group-not-found: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Could not determine your LuckPerms primary group.</red>"
+
+  pack-required: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>Your custom prefix will appear after the TabPrefix resource pack is loaded.</gray>"
+
+
+# =========================================================
+# PREFIX INFO
+# =========================================================
+
+prefix-info:
+  header: "<yellow><bold>TabPrefix Prefix Info</bold></yellow>"
+
+  group: "<gray>Group:</gray> <yellow><group></yellow>"
+
+  type: "<gray>Type:</gray> <yellow><type></yellow>"
+
+  frames: "<gray>Frames:</gray> <yellow><frames></yellow>"
+
+  glyphs: "<gray>Glyphs:</gray> <yellow><glyphs></yellow>"
+
+  enabled: "<gray>Enabled:</gray> <green><enabled></green>"
+
+  no-prefix: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>No custom prefix is configured for your group.</gray>"
+
+
+# =========================================================
+# RESOURCE PACK
+# =========================================================
+
+resource-pack:
+  rolled-back: "<green>Retained resource pack activated.</green>"
+  sent-count: "<green>Sent pack to <players> players.</green>"
+  pending: "<yellow>A previous pack request is pending; the new pack is queued.</yellow>"
+  url: "<gray>Download:</gray> <aqua><url></aqua>"
+  building: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>Building resource pack...</gray>"
+
+  built: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Resource pack built successfully.</green>"
+
+  build-failed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Resource pack build failed.</red>"
+
+  sending: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>Sending resource pack...</gray>"
+
+  sent: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Resource pack sent.</green>"
+
+  accepted: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>Resource pack accepted.</gray>"
+
+  loaded: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Resource pack loaded successfully.</green>"
+
+  declined: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Resource pack was declined.</red>"
+
+  failed-download: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Resource pack download failed.</red>"
+
+  unavailable: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>No active TabPrefix resource pack is available.</red>"
+
+  rebuild-started: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>Resource pack rebuild started.</gray>"
+
+  rebuild-complete: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Resource pack rebuild complete.</green>"
+
+  hash: "<gray>Pack:</gray> <yellow><hash></yellow>"
+
+  glyph-count: "<gray>Glyphs:</gray> <yellow><glyphs></yellow>"
+
+  atlas-count: "<gray>Atlas pages:</gray> <yellow><atlases></yellow>"
+
+
+# =========================================================
+# STATUS
+# =========================================================
+
+status:
+  graphic-prefixes: "<gray>Web prefix groups:</gray> <yellow><prefixes></yellow>"
+  glyph-range: "<gray>Glyphs:</gray> <yellow><used>/<capacity></yellow> <gray>(<start>–<end>)</gray>"
+  source-package: "<gray>Images, animation, text prefixes, web editor and resource packs.</gray>"
+
+  header: "<yellow><bold>TabPrefix 2.0 Status</bold></yellow>"
+
+  version: "<gray>Plugin:</gray> <yellow><version></yellow>"
+
+  minecraft: "<gray>Minecraft:</gray> <yellow><minecraft></yellow>"
+
+  platform: "<gray>Platform:</gray> <yellow><platform></yellow>"
+
+  luckperms: "<gray>LuckPerms:</gray> <green><luckperms></green>"
+
+  database: "<gray>Database:</gray> <green><database></green>"
+
+  web: "<gray>Web server:</gray> <green><web></green>"
+
+  prefixes: "<gray>Prefixes:</gray> <yellow><prefixes></yellow>"
+
+  animations: "<gray>Animated prefixes:</gray> <yellow><animations></yellow>"
+
+  glyphs: "<gray>Glyphs:</gray> <yellow><glyphs></yellow>"
+
+  pack: "<gray>Resource pack:</gray> <yellow><pack></yellow>"
+
+  web-sessions: "<gray>Web sessions:</gray> <yellow><sessions></yellow>"
+
+
+# =========================================================
+# ADMIN LOG
+# =========================================================
+
+admin-log:
+  history-line: "<gray><line></gray>"
+  pack-rollback: "<yellow>TabPrefix</yellow> <gray>Pack rollback: <hash>.</gray>"
+  enabled: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Admin mini-backlog enabled.</green>"
+
+  disabled: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <gray>Admin mini-backlog disabled.</gray>"
+
+  web-session-opened: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray><player> opened Web Editor.</gray>"
+
+  image-uploaded: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray><player> uploaded <yellow><file></yellow>.</gray>"
+
+  animation-processed: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray><player> processed animation · <yellow><frames> frames</yellow>.</gray>"
+
+  draft-saved: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray><player> saved a prefix draft.</gray>"
+
+  save-code-created: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray>Save code created for <yellow><player></yellow>.</gray>"
+
+  prefix-apply-started: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray><player> is applying a prefix to <yellow><group></yellow>.</gray>"
+
+  prefix-applied: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <green>Prefix applied</green> <gray>· Group <yellow><group></yellow> · <type></gray>"
+
+  prefix-removed: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray>Custom prefix removed from <yellow><group></yellow>.</gray>"
+
+  pack-build-started: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray>Resource pack build started.</gray>"
+
+  pack-build-completed: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <green>Resource pack built</green> <gray>· <glyphs> glyphs · <atlases> atlases · <hash></gray>"
+
+  pack-build-failed: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <red>Resource pack build failed</red> <gray>· <reason></gray>"
+
+  pack-sent: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray>Resource pack sent to <yellow><players></yellow> players.</gray>"
+
+  pack-load-failed: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <red>Resource pack failed for <player></red> <gray>· <reason></gray>"
+
+
+# =========================================================
+# LUCKPERMS
+# =========================================================
+
+luckperms:
+  unavailable: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>LuckPerms is not available.</red>"
+
+  user-not-loaded: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>LuckPerms user data is not loaded yet.</red>"
+
+  group-changed: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray>LuckPerms group updated for <yellow><player></yellow>.</gray>"
+
+
+# =========================================================
+# DATABASE
+# =========================================================
+
+database:
+  unavailable: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Database is unavailable.</red>"
+
+  save-failed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Could not save TabPrefix data.</red>"
+
+  load-failed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Could not load TabPrefix data.</red>"
+
+
+# =========================================================
+# COMPATIBILITY
+# =========================================================
+
+compatibility:
+  unsupported-minecraft: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Unsupported Minecraft version: <version>.</red>"
+
+  supported-range: "<gray>Supported versions:</gray> <yellow>1.16 - 1.16.5</yellow>"
+
+  platform-detected: "<yellow>TabPrefix</yellow> <dark_gray>›</dark_gray> <gray>Detected platform:</gray> <yellow><platform></yellow>"
+
+
+# =========================================================
+# STARTUP / SHUTDOWN
+# =========================================================
+
+lifecycle:
+  starting: "<yellow><bold>TabPrefix <version></bold></yellow> <gray>starting...</gray>"
+
+  started: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <green>Started successfully.</green>"
+
+  stopping: "<yellow><bold>TabPrefix</bold></yellow> <gray>stopping...</gray>"
+
+  stopped: "<yellow><bold>TabPrefix</bold></yellow> <gray>stopped.</gray>"
+
+  startup-failed: "<yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray> <red>Startup failed: <reason></red>"
+
+# Implemented group text-prefix commands (source package 01)
+text-prefix:
+  invalid: "<yellow>TabPrefix</yellow> <dark_gray>»</dark_gray> <red><reason></red>"
+  saved: "<yellow>TabPrefix</yellow> <dark_gray>»</dark_gray> <green>Text prefix saved for <group>.</green>"
+  removed: "<yellow>TabPrefix</yellow> <dark_gray>»</dark_gray> <green>Text override removed from <group>.</green>"
+  none: "<yellow>TabPrefix</yellow> <dark_gray>»</dark_gray> <gray>No text override is saved for <group>. LuckPerms metadata is used.</gray>"
+  group-not-found: "<yellow>TabPrefix</yellow> <dark_gray>»</dark_gray> <red>Group <group> does not exist or is invalid.</red>"
+  info: "<yellow>TabPrefix</yellow> <dark_gray>»</dark_gray> <gray>Group: <group> · Format: <format> · Updated: <updated> · Text: <text></gray>"
+
+studio:
+  design: "<aqua><bold>TabPrefix Studio</bold></aqua> <gray>—</gray> <green>Click to design your server</green>"
+  settings: "<aqua><bold>TabPrefix Settings</bold></aqua> <gray>—</gray> <green>Click to change your own display</green>"

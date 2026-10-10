@@ -1,0 +1,338 @@
+# =========================================================
+# TabPrefix 2.0
+# Main configuration
+# =========================================================
+
+# 2.2: visual displays, including boss bars, are managed with /lptab design and saved in SQLite.
+# Existing YAML name-tag flags seed the initial Studio document only.
+general:
+  # en uses messages.yml; ru uses messages_ru.yml. Also sets the editor language.
+  language: en
+  debug: false
+
+
+# =========================================================
+# PREFIX SYSTEM
+# =========================================================
+
+prefix:
+  enabled: true
+
+  # Added when the rendered prefix does not end with whitespace.
+  separator: " "
+
+  # LuckPerms primary group is used as the main prefix group.
+  use-primary-group: true
+
+  # Show the custom image/animated prefix before LuckPerms text prefix.
+  image-before-text-prefix: true
+
+  # Fallback to normal LuckPerms text prefix when resource pack is not loaded.
+  fallback-to-text-prefix: true
+
+
+# =========================================================
+# UNICODE GLYPHS
+# =========================================================
+
+glyphs:
+  # Private Use Area range.
+  start-codepoint: 57344   # U+E000
+  end-codepoint: 63743     # U+F8FF
+
+  # Default glyph size used by the first TabPrefix profile.
+  width: 32
+  height: 16
+
+  # Minecraft bitmap font settings.
+  render-height: 16
+  ascent: 13
+
+
+# =========================================================
+# ATLAS
+# =========================================================
+
+atlas:
+  enabled: true
+
+  # Size of generated PNG atlas pages.
+  width: 512
+  height: 512
+
+  # New atlas page is created automatically when current page is full.
+  auto-create-pages: true
+
+  # Output image format.
+  image-format: png
+
+
+# =========================================================
+# IMAGE PROCESSING
+# =========================================================
+
+images:
+  enabled: true
+
+  allowed-formats:
+    - png
+    - jpg
+    - jpeg
+    - gif
+
+  # Upload limits.
+  max-file-size-mb: 10
+  max-width: 4096
+  max-height: 4096
+
+  # Total pixels processed in one upload, including GIF canvas frames.
+  max-decoded-megapixels: 128
+
+  # Disk quota for immutable image originals and frames.
+  max-storage-mb: 512
+
+  # Keep transparency where possible.
+  preserve-alpha: true
+
+  # Upscaling can be enabled from the web editor.
+  upscale:
+    enabled: true
+    max-scale: 4.0
+
+
+# =========================================================
+# ANIMATED PREFIXES
+# =========================================================
+
+animation:
+  enabled: true
+
+  # Safety limits.
+  max-frames: 100
+
+  # Minimum frame delay after conversion to Minecraft ticks.
+  min-frame-delay-ms: 50
+
+  # Default delay if source animation has no valid delay.
+  default-frame-delay-ms: 100
+
+  # Animation scheduler interval.
+  scheduler-period-ticks: 1
+
+
+# =========================================================
+# RESOURCE PACK
+# =========================================================
+
+resource-pack:
+  enabled: true
+
+  # Resource pack is generated automatically after global prefix changes.
+  auto-build: true
+
+  # Automatically send the active pack to online players.
+  auto-send: true
+
+  # Send current pack when player joins.
+  send-on-join: true
+
+  # Re-send a new pack after successful rebuild.
+  resend-after-rebuild: true
+
+  # Use content-based pack filenames to avoid client caching problems.
+  versioned-files: true
+
+  # Keep old generated packs for rollback/cache.
+  keep-old-packs: 3
+
+  # Resource pack description.
+  description: "TabPrefix Resource Pack"
+
+  # Public URL used by Minecraft clients.
+  # Leave empty to use the editor's detected address and actual bound port.
+  public-base-url: ""
+
+
+# =========================================================
+# WEB SERVER
+# =========================================================
+
+web:
+  enabled: true
+
+  # Address used by the embedded HTTP server.
+  bind-address: "0.0.0.0"
+
+  # Preferred HTTP port. 0 asks the OS for a free port (automatic LAN mode only).
+  port: 8765
+
+  # If the preferred port is occupied, try nearby ports and then an OS-assigned port.
+  # Disabled automatically when public-host or a public-base-url is explicitly set,
+  # because a proxy/router/external pack host may require the fixed configured port.
+  auto-port: true
+
+  # Address shown to players in editor links.
+  # Example:
+  # public-host: "192.168.1.50"
+  #
+  # Leave empty to detect active server interfaces, preferring the player's subnet.
+  # Automatic addresses are local server addresses, not a public NAT address.
+  public-host: ""
+
+  # Optional HTTPS reverse proxy URL, e.g. https://prefix.example.com.
+  # Same-LAN access needs no router port forwarding; public Internet access does.
+  public-base-url: ""
+
+  # Web editor session lifetime.
+  session-ttl-minutes: 30
+
+  # Maximum simultaneous editor sessions.
+  max-sessions: 20
+
+  # HTTP request limit.
+  max-request-size-mb: 12
+
+  # Number of HTTP worker threads.
+  worker-threads: 4
+
+
+# =========================================================
+# WEB SAVE CODES
+# =========================================================
+
+save-codes:
+  enabled: true
+
+  # Example result: AB12-CD34
+  length: 8
+  separator: "-"
+  separator-position: 4
+
+  # Code lifetime.
+  ttl-minutes: 30
+
+  # Code can only be used once.
+  single-use: true
+
+  # Save code can only be applied by the player who created it.
+  bind-to-player: true
+
+
+# =========================================================
+# GLOBAL STORAGE
+# =========================================================
+
+storage:
+  type: sqlite
+
+  sqlite:
+    file: "tabprefix.db"
+
+  # Store original/processed prefix files in plugins/TabPrefix/data/
+  data-directory: "data"
+
+  # Temporary web editor files.
+  temp-directory: "temp"
+
+  # Generated resource packs.
+  packs-directory: "packs"
+
+  # Temporary resource pack build directory.
+  staging-directory: "staging"
+
+
+# =========================================================
+# DISPLAY
+# =========================================================
+
+display:
+  tab-list:
+    enabled: true
+
+  chat:
+    enabled: true
+
+  name-tag:
+    enabled: false
+
+  # Do not replace player scoreboard globally.
+  use-own-scoreboard: false
+
+
+# =========================================================
+# LUCKPERMS
+# =========================================================
+
+luckperms:
+  enabled: true
+
+  # Recalculate TabPrefix when LuckPerms user data changes.
+  listen-for-updates: true
+
+
+# =========================================================
+# MINIMESSAGE
+# =========================================================
+
+minimessage:
+  enabled: true
+
+  # Allow MiniMessage formatting in TabPrefix messages.
+  allow-colors: true
+  allow-decorations: true
+  allow-click-events: true
+  allow-hover-events: true
+
+
+# =========================================================
+# ADMIN MINI-BACKLOG
+# =========================================================
+
+admin-log:
+  enabled: true
+
+  permission: "tabprefix.adminlog"
+
+  # Send short operation messages to admins in local Minecraft chat.
+  chat: true
+
+  # Also write audit messages into a file.
+  file: true
+
+  file-name: "audit.log"
+  rotate-size-mb: 10
+  keep-files: 3
+
+  show:
+    web-session-opened: true
+    image-uploaded: true
+    animation-processed: true
+    draft-saved: true
+    save-code-created: true
+    prefix-apply-started: true
+    prefix-applied: true
+    prefix-removed: true
+    pack-build-started: true
+    pack-build-completed: true
+    pack-build-failed: true
+    pack-sent: true
+    pack-rollback: true
+    pack-load-failed: true
+
+
+# =========================================================
+# COMPATIBILITY
+# =========================================================
+
+compatibility:
+  minecraft:
+    min-version: "1.12"
+    max-version: "26.3.99"
+
+  platforms:
+    spigot: true
+    paper: true
+    purpur: true
+
+  # Disable plugin if unsupported Minecraft version is detected.
+  reject-unsupported-version: true

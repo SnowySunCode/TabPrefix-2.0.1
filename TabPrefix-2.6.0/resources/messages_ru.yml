@@ -1,0 +1,191 @@
+# TabPrefix 2.0 — русский каталог MiniMessage
+general:
+  prefix: <yellow><bold>TabPrefix</bold></yellow> <dark_gray>»</dark_gray>
+  no-permission: <red>У вас нет права на эту команду.</red>
+  players-only: <red>Эта команда доступна только игроку.</red>
+  player-not-found: <red>Игрок <player> сейчас не в сети.</red>
+  unknown-command: <red>Неизвестная команда. Используйте /lptab help.</red>
+  invalid-arguments: <red>Неверные аргументы команды.</red>
+  internal-error: <red>Ошибка операции. Подробности записаны в консоль.</red>
+  not-ready: <yellow>TabPrefix ещё запускается.</yellow>
+  reload-failed: '<red>Настройки не изменены: <reason></red>'
+  reloaded: <green>Настройки TabPrefix перечитаны.</green>
+help:
+  design: "<yellow>/lptab design</yellow> <gray>— Визуальные настройки оформления сервера.</gray>"
+  settings: "<yellow>/lptab settings</yellow> <gray>— Личные настройки отображения.</gray>"
+  linkwifi: "<yellow>/lptab linkwifi [IP|auto]</yellow> <gray>— Выбрать локальный адрес сервера для редактора.</gray>"
+  doctor: "<yellow>/lptab doctor</yellow> <gray>— Проверить команды; отчёт в чат и лог сервера.</gray>"
+  header: <yellow><bold>Команды TabPrefix</bold></yellow>
+  core-help: <yellow>/lptab help</yellow> <gray>— Доступные команды.</gray>
+  prefix-set: <yellow>/lptab prefix set \<group> [--mini|--legacy] \<text></yellow> <gray>— Текстовый префикс группы.</gray>
+  prefix-remove: <yellow>/lptab prefix remove \<group></yellow> <gray>— Вернуть текст LuckPerms.</gray>
+  prefix-info: <yellow>/lptab prefix info \<group></yellow> <gray>— Сведения о тексте группы.</gray>
+  webeditor: <yellow>/lptab webeditor [group]</yellow> <gray>— Открыть редактор.</gray>
+  webpref: <yellow>/lptab webpref \<code></yellow> <gray>— Применить код редактора.</gray>
+  webpref-remove: <yellow>/lptab webpref remove [group]</yellow> <gray>— Удалить весь собственный префикс.</gray>
+  webpref-info: <yellow>/lptab webpref info [group]</yellow> <gray>— Сведения о префиксе.</gray>
+  status: <yellow>/lptab status</yellow> <gray>— Состояние плагина.</gray>
+  reload: <yellow>/lptab reload</yellow> <gray>— Перечитать настройки.</gray>
+  pack-status: <yellow>/lptab pack status</yellow> <gray>— Состояние ресурс-пака.</gray>
+  glyphs: <yellow>/lptab glyphs</yellow> <gray>— Ёмкость диапазона символов.</gray>
+  pack-send: <yellow>/lptab pack send [player|all]</yellow> <gray>— Отправить пак.</gray>
+  pack-rollback: <yellow>/lptab pack rollback \<hash></yellow> <gray>— Активировать сохранённый пак.</gray>
+  adminlog-recent: <yellow>/lptab adminlog recent [1..50]</yellow> <gray>— Последние записи журнала.</gray>
+  pack-rebuild: <yellow>/lptab pack rebuild</yellow> <gray>— Пересобрать ресурс-пак.</gray>
+  adminlog-on: <yellow>/lptab adminlog on</yellow> <gray>— Включить сообщения журнала.</gray>
+  adminlog-off: <yellow>/lptab adminlog off</yellow> <gray>— Выключить сообщения журнала.</gray>
+linkwifi:
+  header: "<gold><bold>TabPrefix · Локальная сеть</bold></gold>"
+  lan: "<gray>Это интерфейсы компьютера с сервером, а не названия Wi-Fi. Нужна общая локальная сеть; пароль Wi-Fi не требуется.</gray>"
+  current: "<gray>Текущий адрес (проверка HTTP):</gray> <aqua><url></aqua>"
+  row: "<aqua><mark></aqua> <white><network></white> <yellow><address>:<port></yellow> <dark_gray>[<scope>]</dark_gray> <gray>— <command></gray>"
+  auto: "<green>[Автоматический выбор]</green> <gray>— <command></gray>"
+  automatic: "<green>Автоматический выбор адреса восстановлен.</green>"
+  selected: "<green>Выбран <address> для ваших ссылок на срок до 2 часов. Открываем редактор…</green>"
+  address-gone: "<red>Этот адрес больше не доступен на сервере. Выполните /lptab linkwifi заново.</red>"
+  scope-local: "только этот компьютер"
+  scope-virtual: "виртуальный интерфейс"
+  scope-network: "интерфейс сервера"
+  footer: "<gray>Нажмите строку, чтобы открыть новую сессию редактора. ● отмечает текущий адрес. При необходимости разрешите указанный HTTP-порт в брандмауэре компьютера с сервером.</gray>"
+  loopback-only: "<yellow>Доступен только loopback. Для подключения с другого устройства проверьте web.bind-address и подключение компьютера с сервером к сети.</yellow>"
+  peer-mismatch: "<yellow>Адрес игрового подключения не совпадает с подсетями сервера. Локальная ссылка работает, только если браузер имеет доступ к этой сети; выбор IP не создаёт туннель.</yellow>"
+  state-starting: "<yellow>Веб-редактор запускается. Если это состояние не меняется, проверьте /lptab doctor.</yellow>"
+  state-disabled: "<yellow>Веб-редактор выключен (web.enabled: false). Включите его и перезапустите сервер.</yellow>"
+  state-listening: "<green>Редактор принимает подключения:</green> <gray><bind>:<port></gray>"
+  state-bind-failed: "<red>Не удалось занять <bind>:<port>: <reason></red> <gray>Проверьте web.bind-address, свободный порт и /lptab doctor.</gray>"
+  state-start-failed: "<red>Ошибка запуска редактора: <reason></red> <gray>Проверьте /lptab doctor и лог запуска.</gray>"
+  state-stopped: "<yellow>Веб-редактор остановлен.</yellow>"
+
+webeditor:
+  starting: <yellow>Создаём сессию редактора…</yellow>
+  opened: <green>Сессия редактора создана.</green>
+  link: <gray>Редактор:</gray> <aqua><url></aqua>
+  expires: <gray>Ссылка действует <yellow><minutes></yellow> мин.</gray>
+  session-failed: <red>Не удалось создать сессию редактора.</red>
+  session-expired: <red>Сессия истекла. Откройте редактор заново.</red>
+  session-limit: <red>Достигнут лимит активных сессий.</red>
+  unavailable: <red>Веб-редактор недоступен. Проверьте настройки HTTP в консоли.</red>
+upload:
+  received: <green>Изображение загружено.</green>
+  invalid-format: <red>Формат изображения не поддерживается.</red>
+  too-large: <red>Файл превышает разрешённый размер.</red>
+  invalid-image: <red>Файл не является допустимым изображением.</red>
+  processing-failed: <red>Не удалось обработать изображение.</red>
+  gif-too-many-frames: <red>В анимации слишком много кадров.</red>
+  gif-processed: '<green>Анимация обработана.</green> <gray>Кадров: <frames>.</gray>'
+save-code:
+  disabled: <red>Коды сохранения отключены.</red>
+  wrong-group: <red>Код предназначен для другой группы LuckPerms.</red>
+  glyph-limit: <red>Диапазон Unicode заполнен. Новые кадры не назначены.</red>
+  created: <green>Черновик префикса сохранён.</green>
+  code: <yellow><bold>Код сохранения:</bold></yellow> <white><code></white>
+  command: <gray>Примените в игре:</gray> <yellow>/lptab webpref <code></yellow>
+  expires: <gray>Код действует <minutes> мин.</gray>
+  invalid: <red>Неверный код сохранения.</red>
+  expired: <red>Срок действия кода истёк.</red>
+  already-used: <red>Этот одноразовый код уже применён.</red>
+  wrong-player: <red>Код принадлежит другому игроку.</red>
+  failed: <red>Не удалось создать код сохранения.</red>
+prefix:
+  applying: <yellow>Применяем префикс…</yellow>
+  applied: <green>Префикс группы обновлён.</green>
+  applied-group: <gray>Группа:</gray> <yellow><group></yellow>
+  applied-type: <gray>Тип:</gray> <yellow><type></yellow>
+  applied-frames: <gray>Кадров:</gray> <yellow><frames></yellow>
+  removed: <green>Собственный префикс группы удалён.</green>
+  none: <gray>Для группы не задан собственный префикс.</gray>
+  failed: <red>Не удалось применить префикс.</red>
+  remove-failed: <red>Не удалось удалить префикс.</red>
+  group-not-found: <red>Не удалось определить группу LuckPerms.</red>
+  pack-required: <gray>Изображение появится после загрузки ресурс-пака TabPrefix.</gray>
+prefix-info:
+  header: <yellow><bold>Префикс группы</bold></yellow>
+  group: <gray>Группа:</gray> <yellow><group></yellow>
+  type: <gray>Тип:</gray> <yellow><type></yellow>
+  frames: <gray>Кадров:</gray> <yellow><frames></yellow>
+  glyphs: <gray>Символов:</gray> <yellow><glyphs></yellow>
+  enabled: <gray>Включён:</gray> <green><enabled></green>
+  no-prefix: <gray>Собственный префикс группы не настроен.</gray>
+resource-pack:
+  rolled-back: <green>Сохранённый ресурс-пак активирован.</green>
+  sent-count: '<green>Пак отправлен игрокам: <players>.</green>'
+  pending: <yellow>Ожидается ответ на предыдущий пак. Новый пак поставлен в очередь.</yellow>
+  url: <gray>Скачать:</gray> <aqua><url></aqua>
+  building: <yellow>Собираем ресурс-пак…</yellow>
+  built: <green>Ресурс-пак собран.</green>
+  build-failed: <red>Не удалось собрать ресурс-пак. Активный пак сохранён.</red>
+  sending: <yellow>Отправляем ресурс-пак…</yellow>
+  sent: <green>Ресурс-пак отправлен или уже загружен.</green>
+  accepted: <gray>Клиент принял ресурс-пак.</gray>
+  loaded: <green>Ресурс-пак загружен. Графические префиксы включены.</green>
+  declined: <yellow>Ресурс-пак отклонён. Используется текстовый префикс.</yellow>
+  failed-download: <red>Клиент не смог скачать ресурс-пак.</red>
+  unavailable: <gray>Активный ресурс-пак недоступен.</gray>
+  rebuild-started: <yellow>Пересборка ресурс-пака началась.</yellow>
+  rebuild-complete: <green>Ресурс-пак пересобран.</green>
+  hash: <gray>SHA-1 пака:</gray> <yellow><hash></yellow>
+  glyph-count: <gray>Символов:</gray> <yellow><glyphs></yellow>
+  atlas-count: <gray>Страниц атласа:</gray> <yellow><atlases></yellow>
+status:
+  graphic-prefixes: <gray>Групп с веб-префиксом:</gray> <yellow><prefixes></yellow>
+  glyph-range: <gray>Символов:</gray> <yellow><used>/<capacity></yellow> <gray>(<start>–<end>)</gray>
+  source-package: <gray>Изображения, анимация, текст, редактор и ресурс-паки.</gray>
+  header: <yellow><bold>Состояние TabPrefix 2.0</bold></yellow>
+  version: <gray>Плагин:</gray> <yellow><version></yellow>
+  minecraft: <gray>Minecraft:</gray> <yellow><minecraft></yellow>
+  platform: <gray>Платформа:</gray> <yellow><platform></yellow>
+  luckperms: <gray>LuckPerms:</gray> <green><luckperms></green>
+  database: <gray>База данных:</gray> <green><database></green>
+  web: <gray>HTTP:</gray> <green><web></green>
+  prefixes: <gray>Текстовых префиксов:</gray> <yellow><prefixes></yellow>
+  animations: <gray>Анимированных префиксов:</gray> <yellow><animations></yellow>
+  glyphs: <gray>Выделено символов:</gray> <yellow><glyphs></yellow>
+  pack: <gray>Активный пак:</gray> <yellow><pack></yellow>
+  web-sessions: <gray>Сессий редактора:</gray> <yellow><sessions></yellow>
+admin-log:
+  history-line: <gray><line></gray>
+  pack-rollback: <yellow>TabPrefix</yellow> <gray>Активирован сохранённый пак <hash>.</gray>
+  enabled: <green>Сообщения журнала включены для вас.</green>
+  disabled: <gray>Сообщения журнала выключены для вас.</gray>
+  web-session-opened: <gray><player> открыл редактор для группы <group>.</gray>
+  image-uploaded: <gray><player> загрузил изображение <file>.</gray>
+  animation-processed: '<gray><player> обработал анимацию: <frames> кадров.</gray>'
+  draft-saved: <gray><player> сохранил черновик префикса.</gray>
+  save-code-created: <gray>Код сохранения создан для <player>.</gray>
+  prefix-apply-started: <gray><player> применяет префикс группы <group>.</gray>
+  prefix-applied: <green>Префикс применён:</green> <gray>группа <group>, тип <type>.</gray>
+  prefix-removed: <gray>Собственный префикс группы <group> удалён.</gray>
+  pack-build-started: <gray>Началась сборка ресурс-пака.</gray>
+  pack-build-completed: <green>Пак собран:</green> <gray><glyphs> символов, <atlases> атласов, <hash>.</gray>
+  pack-build-failed: <red>Ошибка сборки пака:</red> <gray><reason>.</gray>
+  pack-sent: '<gray>Пак отправлен игрокам: <players>.</gray>'
+  pack-load-failed: <red>Ошибка загрузки пака для <player>:</red> <gray><reason>.</gray>
+luckperms:
+  unavailable: <red>LuckPerms недоступен.</red>
+  user-not-loaded: <yellow>Данные игрока LuckPerms ещё не загружены.</yellow>
+  group-changed: <gray>Группа LuckPerms обновлена для <player>.</gray>
+database:
+  unavailable: <red>База данных недоступна.</red>
+  save-failed: <red>Не удалось записать данные TabPrefix.</red>
+  load-failed: <red>Не удалось загрузить данные TabPrefix.</red>
+compatibility:
+  unsupported-minecraft: '<red>Неподдерживаемая версия Minecraft: <version>.</red>'
+  supported-range: <gray>Поддерживаемые версии:</gray> <yellow>1.16–1.16.5.</yellow>
+  platform-detected: <gray>Платформа:</gray> <yellow><platform>.</yellow>
+lifecycle:
+  starting: <yellow><bold>TabPrefix <version></bold></yellow> <gray>запускается…</gray>
+  started: <green>TabPrefix запущен.</green>
+  stopping: <gray>TabPrefix останавливается…</gray>
+  stopped: <gray>TabPrefix остановлен.</gray>
+  startup-failed: '<red>Ошибка запуска: <reason>.</red>'
+text-prefix:
+  invalid: <red><reason></red>
+  saved: <green>Текстовый префикс группы <group> сохранён.</green>
+  removed: <green>Текстовый префикс группы <group> удалён.</green>
+  none: <gray>Для <group> используется префикс из интеграции групп, если он задан.</gray>
+  group-not-found: <red>Группы <group> не существует или её имя некорректно.</red>
+  info: '<gray>Группа: <group> · Формат: <format> · Обновлён: <updated> · Текст: <text></gray>'
+
+studio:
+  design: "<aqua><bold>TabPrefix Studio</bold></aqua> <gray>—</gray> <green>Нажмите, чтобы настроить оформление сервера</green>"
+  settings: "<aqua><bold>TabPrefix Настройки</bold></aqua> <gray>—</gray> <green>Нажмите, чтобы изменить отображение для себя</green>"
